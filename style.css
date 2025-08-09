@@ -6,9 +6,9 @@ body {
   font-family: "DM Sans", sans-serif;
 
   background-color: hsl(0 0% 97.41% / 90.3%);
-  div {
-    border-radius: 10px;
-  }
+}
+body div {
+  border-radius: 10px;
 }
 @media screen and (max-width: 375px) {
   .container {
@@ -19,61 +19,27 @@ body {
     margin: 30px auto;
   }
 }
-@media screen and (min-width: 376px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 40% 30% 30%;
-    gap: 20px;
-    width: 90%;
-    margin: 30px auto;
-  }
-  .social-media {
-    grid-area: 1/2/2/4;
-  }
-  .schedule {
-    grid-area: 1/4/3/5;
-  }
-  .create-post {
-    grid-area: 1/1/2/2;
-  }
-  .using-ai {
-    grid-area: 2/1/4/2;
-  }
-  .Maintain {
-    grid-area: 2/3/3/4;
-  }
-  .multi-acount {
-    grid-area: 2/2/3/3;
-    img {
-      width: 200px;
-    }
-  }
-  .attribution {
-    grid-area: 3/3/4/5;
-    display: flex;
-    flex-direction: row;
-  }
-  .faster {
-    grid-area: 3/2/4/3;
-  }
+.same-display {
+  display: flex;
+  flex-direction: column;
 }
+
 .social-media {
   background-color: hsl(256, 67%, 59%);
   gap: 10px;
   justify-content: center;
   align-items: center;
   height: 300px;
-  p {
-    color: white;
-  }
-  p:last-child {
-    font-size: large;
-    color: hsl(31, 66%, 93%);
-  }
-  img {
-    margin-top: 15px;
-  }
+}
+.social-media p {
+  color: white;
+}
+.social-media p:last-child {
+  font-size: large;
+  color: hsl(31, 66%, 93%);
+}
+.social-media img {
+  margin-top: 15px;
 }
 
 .speed {
@@ -89,21 +55,21 @@ body {
 .multi-acount {
   background-color: hsl(0, 0%, 100%);
   padding: 15px;
-  p {
-    margin-top: 8px;
-    font-size: x-large;
-    font-weight: 600;
-  }
+}
+.multi-acount p {
+  margin-top: 8px;
+  font-size: x-large;
+  font-weight: 600;
 }
 .Maintain {
   background-color: hsl(39, 100%, 71%);
   padding: 15px 15px 0;
-  p {
-    font-size: x-large;
-    font-weight: 600;
-    line-height: 25px;
-    margin-bottom: 20px;
-  }
+}
+.Maintain p {
+  font-size: x-large;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 20px;
 }
 .schedule {
   background-color: hsl(254, 88%, 90%);
@@ -139,37 +105,128 @@ body {
   gap: 10px;
   background-color: white;
   padding: 20px;
-  span {
-    font-size: xx-large;
-    font-weight: 600;
-  }
+}
+.faster span {
+  font-size: xx-large;
+  font-weight: 600;
 }
 .create-post {
   gap: 20px;
   padding: 25px;
   background-color: hsl(31, 66%, 93%);
-  p {
-    font-size: x-large;
-    font-weight: 600;
-    line-height: 25px;
-    width: 250px;
-    i {
-      color: hsl(256, 67%, 59%);
-    }
-  }
+}
+.create-post p {
+  font-size: x-large;
+  font-weight: 600;
+  line-height: 25px;
+  width: 250px;
+}
+.create-post p i {
+  color: hsl(256, 67%, 59%);
 }
 .using-ai {
   gap: 15px;
   padding: 25px;
   background-color: hsl(39, 100%, 71%);
-  p {
-    font-size: 28px;
+}
+.using-ai p {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 30px;
+  width: 270px;
+}
+
+@media screen and (min-width: 376px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40% 30% 30%;
+    gap: 20px;
+    width: 90%;
+    margin: 30px auto;
+  }
+  .social-media {
+    grid-area: 1/2/2/4;
+  }
+  .social-media-title {
+    font-size: 53px;
+    line-height: 55px;
+    width: 450px;
+  }
+  .schedule {
+    grid-area: 1/4/3/5;
+    justify-content: space-around;
+  }
+  .title {
+    font-size: xx-large;
+    width: 200px;
+    line-height: 30px;
+  }
+  .content {
+    font-size: larger;
+    width: 200px;
+  }
+  .schedule img {
+    width: 200px;
+  }
+  .create-post {
+    grid-area: 1/1/2/2;
+  }
+  .create-post p {
+    font-size: xx-large;
     font-weight: 600;
     line-height: 30px;
-    width: 270px;
+    width: 200px;
   }
-}
-.same-display {
-  display: flex;
-  flex-direction: column;
+  .create-post img {
+    width: 200px;
+    margin: 20px auto;
+  }
+  .using-ai {
+    grid-area: 2/1/4/2;
+    justify-content: space-between;
+  }
+  .using-ai p {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 35px;
+    width: 200px;
+  }
+  .using-ai img {
+    width: 250px;
+  }
+  .Maintain {
+    grid-area: 2/3/3/4;
+  }
+  .Maintain p {
+    font-size: xx-large;
+    line-height: 30px;
+    width: 200px;
+  }
+  .Maintain img {
+    height: 105px;
+    margin-left: 30px;
+  }
+  .multi-acount {
+    grid-area: 2/2/3/3;
+  }
+  .multi-acount img {
+    width: 200px;
+  }
+  .attribution {
+    grid-area: 3/3/4/5;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+  }
+  .followers-title {
+    font-size: xx-large;
+    line-height: 30px;
+    width: 280px;
+  }
+
+  .faster {
+    grid-area: 3/2/4/3;
+  }
 }
